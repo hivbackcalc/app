@@ -227,19 +227,19 @@ library(shiny)
 Once shiny is running in the R session HIVBackCalc can be run by typing the code below in to the R console window (or cut and paste) and pressing enter:
 
 ```r
-runGitHub('netterie/HIVBackCalc_App', launch.browser=TRUE)  
+runGitHub('hivbackcalc/app', launch.browser=TRUE)  
 ``` 
 
 If an error appears after the above step, e.g. "cannot open URL", use these alternate instructions.
 
-1. In a browser, navigate to https://github.com/netterie/HIVBackCalc_App  
+1. In a browser, navigate to https://github.com/hivbackcalc/app
 2. Click the "Download ZIP" button in the bottom right corner  
-3. Rename the file "HIVBackCalc_App.zip" (remove the -master part) and save to a simple location, e.g. C:  
+3. Rename the file "app.zip" (remove the -master part) and save to a simple location, e.g. C:  
 4. Unzip the .zip file in that location  
-5. In R, type the following, hitting "enter" after each line. The syntax below assumes that the folder has been unzipped to C:\, so the folder C:\HIVBackCalc_App is on the machine. If a different location is selected for the HIVBackCalc app, replace C:\ with the appropriate location, using only forward slashes instead of backslashes, as shown below.  
+5. In R, type the following, hitting "enter" after each line. The syntax below assumes that the folder has been unzipped to C:\, so the folder C:\app is on the machine. If a different location is selected for the HIVBackCalc app, replace C:\ with the appropriate location, using only forward slashes instead of backslashes, as shown below.  
 
 ```r
-setwd('C:/HIVBackCalc_App')
+setwd('C:/app')
 library(shiny)
 runApp(, launch.browser=TRUE)
 ```

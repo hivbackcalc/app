@@ -383,16 +383,16 @@ library(devtools)</code></pre>
 <div id="downloading-the-hivbackcalc-app" class="section level2">
 <h2><span class="header-section-number">5.3</span> Downloading the HIVBackCalc app</h2>
 <p>Once shiny is running in the R session HIVBackCalc can be run by typing the code below in to the R console window (or cut and paste) and pressing enter:</p>
-<pre class="r"><code>runGitHub('netterie/HIVBackCalc_App', launch.browser=TRUE)  </code></pre>
+<pre class="r"><code>runGitHub('hivbackcalc/app', launch.browser=TRUE)  </code></pre>
 <p>If an error appears after the above step, e.g. “cannot open URL”, use these alternate instructions.</p>
 <ol style="list-style-type: decimal">
-<li>In a browser, navigate to <a href="https://github.com/netterie/HIVBackCalc_App" class="uri">https://github.com/netterie/HIVBackCalc_App</a><br /></li>
+<li>In a browser, navigate to <a href="https://github.com/hivbackcalc/app" class="uri">https://github.com/hivbackcalc/app</a></li>
 <li>Click the “Download ZIP” button in the bottom right corner<br /></li>
-<li>Rename the file “HIVBackCalc_App.zip” (remove the -master part) and save to a simple location, e.g. C:<br /></li>
+<li>Rename the file “app.zip” (remove the -master part) and save to a simple location, e.g. C:<br /></li>
 <li>Unzip the .zip file in that location<br /></li>
-<li>In R, type the following, hitting “enter” after each line. The syntax below assumes that the folder has been unzipped to C:, so the folder C:_App is on the machine. If a different location is selected for the HIVBackCalc app, replace C: with the appropriate location, using only forward slashes instead of backslashes, as shown below.</li>
+<li>In R, type the following, hitting “enter” after each line. The syntax below assumes that the folder has been unzipped to C:, so the folder C:is on the machine. If a different location is selected for the HIVBackCalc app, replace C: with the appropriate location, using only forward slashes instead of backslashes, as shown below.</li>
 </ol>
-<pre class="r"><code>setwd('C:/HIVBackCalc_App')
+<pre class="r"><code>setwd('C:/app')
 library(shiny)
 runApp(, launch.browser=TRUE)</code></pre>
 </div>
