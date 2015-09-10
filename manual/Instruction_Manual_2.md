@@ -60,14 +60,14 @@ Once the required variables are extracted from eHARS, the user will need to cons
 
 Variable name  | Description | Type | Values
 ------------- | ------------- | ------------- | -------------
-mode | mode of transmission groups | character | TBD
 hdx_age | age at diagnosis | numeric |
+agecat5 | describes 5-year age groups | character | e.g., "30-34"
+race | race | character | any
+mode | mode of transmission groups | character | any
 yearDx | year of diagnosis | numeric | 
-everHadNegTest | ever had a negative HIV test | character | TRUE FALSE or NA
-race | race | character | white, Black, Other
-agecat5 | describes 5-year age groups | character
+everHadNegTest | ever had a negative HIV test | character | TRUE, FALSE, or NA
 timeDx | quarter-year of diagnosis | numeric | 1 to 4
-infPeriod | time from last negative test to diagnosis in years | numeric | 
+infPeriod | time from last negative test to diagnosis in years | numeric | e.g., 1.48
 
 [Back to Table of Contents](#TOC)
 
@@ -75,7 +75,7 @@ infPeriod | time from last negative test to diagnosis in years | numeric |
 
 The online app is available at the link below. Open the app in a new tab and follow the steps below to do an example analysis, either using the included sample dataset or your own data.
 
-([hivbackcalc](https://hivbackcalc.shinyapps.io/HIVBackCalc_App/))
+([hivbackcalc](https://hivbackcalc.shinyapps.io/main))
 
 ## Overview of the app
 
@@ -154,7 +154,9 @@ The TID under these two assumptions are displayed on the same plot. The y-axis r
 
 Click on the _Backcalculate Infections_ tab at the top of the app to get to the backcalculation section.  Clicking on the _Run backcalculation_ button on the left will run the backcalculation.  This may take a few moments, as indicated by the progress message in the top right corner.
 
-A plot and the table appear after the backcalculation is complete. Each describes quarterly diagnosis counts along with estimated quarterly incidence counts and undiagnosed counts.  While the plot shows these statistics for each quarter within the data's time period, the table summarizes them over all quarters.  The incidence and the number of undiagnosed cases are generate under the two different assumptions for calculating the TID.  In this example, the different assumptions had little impact on the estimated incidence but a substantial impact on the estimates of the number of undiagnosed cases. This is because undiagnosed cases in 2006-2012 arise from incident cases from up to 18 years prior. The Base Case and Upper Bound make assumptions about how the incident cases are distributed over that entire time period, while the plot only depicts 2006-2012 incidence.   
+Plots and a table appear after the backcalculation is complete. Each describes quarterly diagnosis counts along with estimated quarterly incidence counts and undiagnosed counts.  While the plots show these statistics for each quarter within the data's time period, the table summarizes them over all quarters.  
+
+Each assumption for the TID, Base Case and Upper Bound, generates separate incidence and undiagnosed estiamtes.  In this example, the different assumptions had little impact on the estimated incidence but a substantial impact on the estimates of the number of undiagnosed cases. This is because undiagnosed cases in 2006-2012 arise from incident cases from up to 18 years prior. The Base Case and Upper Bound make assumptions about how the incident cases are distributed over that entire time period, while the plot only depicts 2006-2012 incidence.   
 
 <center>
 
@@ -263,7 +265,7 @@ install.packages('devtools')
 library(devtools)
 source_url('https://gist.github.com/netterie/65ae953108408a62539d/raw/HIVBackCalc_PackageInstalls.R')
 library(shiny) 
-runGitHub('netterie/HIVBackCalc_App', launch.browser=TRUE)
+runGitHub('hivbackcalc/app', launch.browser=TRUE)
 ```
 
 ## Using the app

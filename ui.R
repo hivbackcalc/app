@@ -116,7 +116,7 @@ shinyUI(
              ),
 
             tabPanel('Help',
-                     p('Please view our', a('instruction manual', href='https://rawgit.com/netterie/HIVBackCalc_App/master/Instruction%20Manual/Instruction_Manual_2.html'), 'for a guided tutorial.')
+                     p('Please view our', a('instruction manual', href='https://cdn.rawgit.com/hivbackcalc/app/master/manual/Instruction_Manual_2.html'), 'for a guided tutorial.')
             )
              )
 )

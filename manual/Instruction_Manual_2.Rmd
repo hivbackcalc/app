@@ -68,14 +68,14 @@ Once the required variables are extracted from eHARS, the user will need to cons
 
 Variable name  | Description | Type | Values
 ------------- | ------------- | ------------- | -------------
-mode | mode of transmission groups | character | TBD
 hdx_age | age at diagnosis | numeric |
+agecat5 | describes 5-year age groups | character | e.g., "30-34"
+race | race | character | any
+mode | mode of transmission groups | character | any
 yearDx | year of diagnosis | numeric | 
-everHadNegTest | ever had a negative HIV test | character | TRUE FALSE or NA
-race | race | character | white, Black, Other
-agecat5 | describes 5-year age groups | character
+everHadNegTest | ever had a negative HIV test | character | TRUE, FALSE, or NA
 timeDx | quarter-year of diagnosis | numeric | 1 to 4
-infPeriod | time from last negative test to diagnosis in years | numeric | 
+infPeriod | time from last negative test to diagnosis in years | numeric | e.g., 1.48
 
 [Back to Table of Contents](#TOC)
 
@@ -83,7 +83,7 @@ infPeriod | time from last negative test to diagnosis in years | numeric |
 
 The online app is available at the link below. Open the app in a new tab and follow the steps below to do an example analysis, either using the included sample dataset or your own data.
 
-([hivbackcalc](https://hivbackcalc.shinyapps.io/HIVBackCalc_App/))
+([hivbackcalc](https://hivbackcalc.shinyapps.io/main))
 
 ## Overview of the app
 
@@ -273,7 +273,7 @@ install.packages('devtools')
 library(devtools)
 source_url('https://gist.github.com/netterie/65ae953108408a62539d/raw/HIVBackCalc_PackageInstalls.R')
 library(shiny) 
-runGitHub('netterie/HIVBackCalc_App', launch.browser=TRUE)
+runGitHub('hivbackcalc/app', launch.browser=TRUE)
 ```
 
 ## Using the app
