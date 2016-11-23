@@ -5,5 +5,8 @@ Visit http://hivbackcalc.github.io/ for more information.
 
 ## Release Notes
 
+### 11/23/16
+See Wiki for dev info.
+
 ### 9/10/15
 Established this location for the app.
